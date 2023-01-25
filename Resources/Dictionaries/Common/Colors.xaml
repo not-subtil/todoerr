@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+
+    <!--Grays-->
+    <SolidColorBrush x:Key="UltraLightGray">#8f8f93</SolidColorBrush>
+    <SolidColorBrush x:Key="ExtraLightGray">#626266</SolidColorBrush>
+    <SolidColorBrush x:Key="LightGray">#474749</SolidColorBrush>
+    <SolidColorBrush x:Key="DarkGray">#3b3b3d</SolidColorBrush>
+    <SolidColorBrush x:Key="ExtraDarkGray">#2c2c2d</SolidColorBrush>
+    <SolidColorBrush x:Key="UltraDarkGray">#1c1c1e</SolidColorBrush>
+    <SolidColorBrush x:Key="WaterMarkGray">#332C2C2D</SolidColorBrush>
+
+    <!--Diverse colors-->
+    <SolidColorBrush x:Key="Red">#ff443a</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange">#ff9d0a</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow">#ffd60a</SolidColorBrush>
+    <SolidColorBrush x:Key="Green">#31d64a</SolidColorBrush>
+    <SolidColorBrush x:Key="Mint">#65d3ce</SolidColorBrush>
+    <SolidColorBrush x:Key="Teal">#69c2db</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan">#5ac9f4</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue">#0a84ff</SolidColorBrush>
+    <SolidColorBrush x:Key="Indigo">#5e5be5</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple">#bf59f2</SolidColorBrush>
+    <SolidColorBrush x:Key="Pink">#ff385f</SolidColorBrush>
+    <SolidColorBrush x:Key="Brown">#aa8d66</SolidColorBrush>
+
+</ResourceDictionary>

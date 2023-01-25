@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="TodoErr.UserControls.Common.CardSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:common="clr-namespace:TodoErr.UserControls.Common"
+             mc:Ignorable="d"
+             x:Name="CrdSlctr"
+             Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}, Mode=FindAncestor}, Path=ActualWidth}"
+             >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!--newly created tasks go here-->
+        <common:Card Icon="Solid_Stream" Header="Queue">
+            <common:Card.Style>
+                <Style TargetType="{x:Type common:Card}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=CrdSlctr, Path=Index, UpdateSourceTrigger=PropertyChanged}" Value="1">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </common:Card.Style>
+        </common:Card>
+        <!--tasks that got checked as completed-->
+        <common:Card Icon="Solid_Check" Header="Completed">
+            <common:Card.Style>
+                <Style TargetType="{x:Type common:Card}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=CrdSlctr, Path=Index, UpdateSourceTrigger=PropertyChanged}" Value="2">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </common:Card.Style>
+        </common:Card>
+        <!--tasks queued with outdated start date-->
+        <common:Card Icon="Solid_HourglassEnd" Header="Overdue">
+            <common:Card.Style>
+                <Style TargetType="{x:Type common:Card}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=CrdSlctr, Path=Index, UpdateSourceTrigger=PropertyChanged}" Value="3">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </common:Card.Style>
+        </common:Card>
+        <!--Bottom card selector-->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Border CornerRadius="1" BorderThickness="2" BorderBrush="{StaticResource Blue}" Width="35" Height="9" Cursor="Hand" Tag="1" MouseDown="SelectorMouseDown">
+                <Border.Style>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Background" Value="{StaticResource WaterMarkGray}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=CrdSlctr, Path=Index, UpdateSourceTrigger=PropertyChanged}" Value="1">
+                                <Setter Property="Background" Value="{StaticResource Blue}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <Border CornerRadius="1" BorderThickness="2" BorderBrush="{StaticResource Blue}" Width="35" Height="9" Cursor="Hand" Tag="2" MouseDown="SelectorMouseDown" Margin="25 0">
+                <Border.Style>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Background" Value="{StaticResource WaterMarkGray}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=CrdSlctr, Path=Index, UpdateSourceTrigger=PropertyChanged}" Value="2">
+                                <Setter Property="Background" Value="{StaticResource Blue}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <Border CornerRadius="1" BorderThickness="2" BorderBrush="{StaticResource Blue}" Width="35" Height="9" Cursor="Hand" Tag="3" MouseDown="SelectorMouseDown">
+                <Border.Style>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Background" Value="{StaticResource WaterMarkGray}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=CrdSlctr, Path=Index, UpdateSourceTrigger=PropertyChanged}" Value="3">
+                                <Setter Property="Background" Value="{StaticResource Blue}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

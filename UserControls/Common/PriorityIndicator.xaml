@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="TodoErr.UserControls.Common.PriorityIndicator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             x:Name="PriorityIndicatr"
+             >
+
+    <Border Width="{Binding Width}" Height="{Binding Height}" CornerRadius="12" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Left">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.ColumnSpan="{Binding ElementName=PriorityIndicatr, Path=Priority}" CornerRadius="12" Background="{StaticResource Blue}"/>
+        </Grid>
+    </Border>
+
+</UserControl>

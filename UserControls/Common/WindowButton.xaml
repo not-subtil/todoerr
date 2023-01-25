@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="TodoErr.UserControls.Common.WindowButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.fontawesome.com/icons/"
+             mc:Ignorable="d" 
+             x:Name="WindowBttn"
+             >
+    
+    <Button Style="{StaticResource ResourceKey=TransparentButton}" Command="{Binding ElementName=WindowBttn, Path=Cmd}">
+        <Grid>
+            <fa:ImageAwesome Icon="{Binding ElementName=WindowBttn, Path=Icon}" Width="15" Foreground="WhiteSmoke"/>
+        </Grid>
+    </Button>
+
+</UserControl>

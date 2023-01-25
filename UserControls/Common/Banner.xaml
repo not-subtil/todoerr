@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="TodoErr.UserControls.Common.Banner"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:common="clr-namespace:TodoErr.UserControls.Common" 
+             xmlns:fa="http://schemas.fontawesome.com/icons/"
+             mc:Ignorable="d" 
+             >
+
+    <Border Height="50" BorderThickness="1" BorderBrush="{StaticResource ExtraDarkGray}" Background="#332C2C2D" CornerRadius="12">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--spacing purposes-->
+                <ColumnDefinition Width="25"/>
+                <!--task name-->
+                <ColumnDefinition Width="240"/>
+                <!--start date-->
+                <ColumnDefinition/>
+                <!--deadline-->
+                <ColumnDefinition/>
+                <!--time left-->
+                <ColumnDefinition/>
+                <!--priority bar-->
+                <ColumnDefinition/>
+                <!--delete icon-->
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Text="Cut grass" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="16" FontWeight="Medium"/>
+
+            <common:Indicator Grid.Column="2" VerticalAlignment="Center" Icon="Solid_HourglassStart" Header="Mon, 19 Dec 2022, 21:22"/>
+            <common:Indicator Grid.Column="3" VerticalAlignment="Center" Icon="Solid_HourglassEnd" Header="Mon, 19 Dec 2022, 21:22"/>
+            <common:Indicator Grid.Column="4" VerticalAlignment="Center" Icon="Solid_Stopwatch" Header="16 hours, 22 minutes, 30 seconds"/>
+            <common:PriorityIndicator Grid.Column="5" Priority="2" Height="25" Width="120"/>
+
+            <fa:ImageAwesome Grid.Column="6" Icon="Solid_TrashAlt" Foreground="{StaticResource Red}" Height="20" Cursor="Hand" ToolTip="Delete"/>
+        </Grid>
+    </Border>
+
+</UserControl>

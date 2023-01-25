@@ -1,0 +1,18 @@
+﻿<Application x:Class="TodoErr.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml"
+             >
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TodoErr;component/Resources/Dictionaries/Common/Colors.xaml"/>
+                <ResourceDictionary Source="/TodoErr;component/Resources/Dictionaries/Common/Button.xaml"/>
+                <ResourceDictionary Source="/TodoErr;component/Resources/Dictionaries/Common/ScrollViewer.xaml"/>
+                <ResourceDictionary Source="/TodoErr;component/Resources/Dictionaries/Common/ToolTip.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

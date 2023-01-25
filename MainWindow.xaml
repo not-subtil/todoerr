@@ -1,0 +1,42 @@
+﻿<Window x:Class="TodoErr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:fa="http://schemas.fontawesome.com/icons/" 
+        xmlns:common="clr-namespace:TodoErr.UserControls.Common"
+        xmlns:converters="clr-namespace:TodoErr.Classes.Converters" 
+        mc:Ignorable="d"
+        Width="{Binding WindowWidth, UpdateSourceTrigger=PropertyChanged, FallbackValue=1700}"
+        Height="{Binding WindowHeight, UpdateSourceTrigger=PropertyChanged, FallbackValue=800}"
+        MinWidth="{Binding WindowMinWidth, UpdateSourceTrigger=PropertyChanged, FallbackValue=1700}"
+        MinHeight="{Binding WindowMinHeight, UpdateSourceTrigger=PropertyChanged, FallbackValue=800}"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <Border CornerRadius="{Binding WindowCornerRadius, UpdateSourceTrigger=PropertyChanged}" BorderThickness="1" BorderBrush="{StaticResource ExtraDarkGray}" Background="{StaticResource UltraDarkGray}">
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10 0">
+                <fa:ImageAwesome Icon="Solid_Brain" Height="20" Foreground="{StaticResource Blue}"/>
+                <TextBlock Text="TodoErr" Foreground="WhiteSmoke" FontSize="15" FontWeight="DemiBold" Margin="10 0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 0">
+                <common:WindowButton Icon="Solid_WindowMinimize" Cmd="{Binding MinimizeCommand}"/>
+                <common:WindowButton Icon="Regular_Square" Cmd="{Binding MaximizeCommand}" Margin="20 0"/>
+                <common:WindowButton Icon="Solid_Times" Cmd="{Binding CloseCommand}"/>
+            </StackPanel>
+            
+            <common:CardSelector Grid.Row="1" HorizontalAlignment="Center" Index="1"/>
+        </Grid>
+    </Border>
+</Window>
