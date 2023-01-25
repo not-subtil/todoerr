@@ -7,11 +7,14 @@ A task has the following data:
 * Description
 * Start date
 * End date
-* Priority
-* State
-** OnQueue
-** Completed
-** Overdue
+* Priority: {Irrelevant, Low, Medium, High}
+* State: {OnQueue, Completed, Overdue}
+
+
+# Previews
+
+![TodoErrImg](https://user-images.githubusercontent.com/62349563/214608733-59444f16-eaa6-466e-802e-d18335c0bc7b.png)
+
 
 # WiP
 
