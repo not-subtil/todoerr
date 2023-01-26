@@ -20,8 +20,7 @@ A task has the following data:
 
 * Interface to create/edit a new task
 * Create edge shadow on scrollviewer to smoth scrolling experience
-* Drag tasks to position them inside the card
+* Implement drag and drop
 * Resize application window
 * Adjust application window maximized size in order to conside windows taskbar
-* Validation on inputs
-* Create custom context menu
+* Design context menu
