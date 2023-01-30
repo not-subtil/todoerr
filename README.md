@@ -24,3 +24,4 @@ A task has the following data:
 * Resize application window
 * Adjust application window maximized size in order to conside windows taskbar
 * Design context menu
+* Create loading animation
