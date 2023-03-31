@@ -7,7 +7,7 @@
              x:Name="PriorityIndicatr"
              >
 
-    <Border Width="{Binding Width}" Height="{Binding Height}" CornerRadius="12" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Left">
+    <Border Width="{Binding Width}" Height="{Binding Height}" CornerRadius="6" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Left">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -15,7 +15,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Border Grid.ColumnSpan="{Binding ElementName=PriorityIndicatr, Path=Priority}" CornerRadius="12" Background="{StaticResource Blue}"/>
+            <Border Grid.ColumnSpan="{Binding ElementName=PriorityIndicatr, Path=Priority}" CornerRadius="6" Background="{StaticResource Blue}"/>
         </Grid>
     </Border>
 

@@ -13,6 +13,7 @@ public static class TaskEnumerations
     public enum State : ushort
     {
         OnQueue = 0,
-        Completed = 1
+        Completed = 1,
+        Overdue = 2,
     }
 }

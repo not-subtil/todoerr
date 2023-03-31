@@ -8,8 +8,8 @@ public class WindowViewModel : BaseViewModel
     Window _window;
 
     public int WindowWidth { get; set; } = 1700;
-    public int WindowMinWidth { get; set; } = 1700;
-    public int WindowHeight { get; set; } = 800;
+    public int WindowMinWidth { get; set; } = 1500;
+    public int WindowHeight { get; set; } = 650;
     public int WindowMinHeight { get; set; } = 800;
     public int WindowCornerRadius { get; set; } = 12;
 

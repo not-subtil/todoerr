@@ -9,8 +9,8 @@
              >
     
     <StackPanel Orientation="Horizontal" Height="auto">
-        <fa:ImageAwesome Icon="{Binding ElementName=Indicatr, Path=Icon}" Foreground="{StaticResource Blue}" Height="20"/>
-        <TextBlock Text="{Binding ElementName=Indicatr, Path=Header}" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="16" FontWeight="Medium" Margin="10 0"/>
+        <fa:ImageAwesome Icon="{Binding ElementName=Indicatr, Path=Icon}" Foreground="{StaticResource Blue}" Height="15"/>
+        <TextBlock Text="{Binding ElementName=Indicatr, Path=Header}" VerticalAlignment="Center" Foreground="WhiteSmoke" FontSize="14" FontWeight="Medium" Margin="10 0"/>
     </StackPanel>
 
 </UserControl>

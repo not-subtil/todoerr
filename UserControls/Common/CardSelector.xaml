@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <!--newly created tasks go here-->
-        <common:Card Icon="Solid_Stream" Header="Queue">
+        <common:Card Icon="Solid_Stream" Header="Queue" Tag="1">
             <common:Card.Style>
                 <Style TargetType="{x:Type common:Card}">
                     <Setter Property="Visibility" Value="Collapsed"/>
@@ -29,7 +29,7 @@
             </common:Card.Style>
         </common:Card>
         <!--tasks that got checked as completed-->
-        <common:Card Icon="Solid_Check" Header="Completed">
+        <common:Card Icon="Solid_Check" Header="Completed" Tag="2">
             <common:Card.Style>
                 <Style TargetType="{x:Type common:Card}">
                     <Setter Property="Visibility" Value="Collapsed"/>
@@ -42,7 +42,7 @@
             </common:Card.Style>
         </common:Card>
         <!--tasks queued with outdated start date-->
-        <common:Card Icon="Solid_HourglassEnd" Header="Overdue">
+        <common:Card Icon="Solid_HourglassEnd" Header="Overdue" Tag="3">
             <common:Card.Style>
                 <Style TargetType="{x:Type common:Card}">
                     <Setter Property="Visibility" Value="Collapsed"/>

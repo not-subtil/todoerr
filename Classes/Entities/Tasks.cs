@@ -10,4 +10,5 @@ public class Tasks : Auditable
     public DateTime Start { get; set; }
     public DateTime End { get; set; }
     public Priority Priority { get; set; }
+    public State State { get; set; }
 }
